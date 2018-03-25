@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Sinatra app-assessment"
-date:   2017-07-15 22:05:31 -0400
+title:      "Sinatra app - assessment"
+date:       2017-07-15 22:05:31 -0400
+permalink:  sinatra_app-assessment
 ---
 
 
