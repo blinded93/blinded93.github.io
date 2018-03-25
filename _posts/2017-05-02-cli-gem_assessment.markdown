@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "CLI-gem assessment"
-date:   2017-05-02 17:39:27 +0000
+title:      "CLI gem - assessment"
+date:       2017-05-02 13:39:28 -0400
+permalink:  cli-gem_assessment
 ---
 
 
