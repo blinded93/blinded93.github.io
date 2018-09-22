@@ -5,12 +5,9 @@ date:   2017-04-30 05:34:20 +0000
 ---
 
 
-I didn't realize that this was going to be a requirement, so here I go..
-
-
 I would have to say that Software Development chose me.
 
-In the past I tried learning coding on my own, without much luck.  I couldn't get myself in the correct mindset; I had the wrong image of a Software Developer. Too much rigidity, not enough creativity. 
+In the past I tried learning coding on my own, without much luck.  I couldn't get myself in the correct mindset; I had the wrong image of a Software Developer. Too much rigidity, not enough creativity.
 
 About a year ago, a co-worker suggested I look into a coding academy called 'Code Fellows'.  This was the first time I had heard of such a thing..I was interested and impressed with the job guarantee, but it was not financially feasible for me at that time.
 

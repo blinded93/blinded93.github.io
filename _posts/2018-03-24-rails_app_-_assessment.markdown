@@ -10,7 +10,7 @@ Project 3 – Done.
 
 I will not say that it was easy.  In fact, it was the most difficult one yet.  
 
-Going into those first few “rails g…..” commands, stubbing out the models and frame of my application, I had no idea how deep I would be in the end.  As I’m writing this, reflecting on the things that I learned and had to teach myself in order to complete this project, my 6 year-old step-daughter walks into the room and demands I get her lunch this instant!
+Going into those first few “rails g…..” commands, stubbing out the models and frame of my application, I had no idea how deep I would be in the end.  As I’m writing this, reflecting on the things that I learned and had to teach myself in order to complete this project, my 6 year-old daughter walks into the room and demands I get her lunch this instant!
 
 Anyways…
 
@@ -26,5 +26,3 @@ So many things happen in life that are hard to predict, often times getting in t
 But I love being challenged. I love learning.  I love coding.
 
 I am happy where I am.
-
-

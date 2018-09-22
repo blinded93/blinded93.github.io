@@ -5,9 +5,9 @@ email: blinded93@gmail.com
 copyright_name: blinded93
 description: > # this means to ignore newlines until "baseurl:"
   Changing my life one keystroke at a time..
-baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: 
-github_username:  blinded93
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+twitter_username:
+github_username: blinded93
 learn_profile: blinded93
 email_username: blinded93@gmail.com
 
