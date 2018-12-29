@@ -5,11 +5,7 @@ email: blinded93@gmail.com
 copyright_name: blinded93
 description: > # this means to ignore newlines until "baseurl:"
   Changing my life one keystroke at a time..
-<<<<<<< HEAD
 baseurl: ""
-=======
-baseurl: "" # the subpath of your site, e.g. /blog
->>>>>>> 67d2078be246a4ea1408e16fd34074bc240f2b16
 twitter_username:
 github_username: blinded93
 learn_profile: blinded93
