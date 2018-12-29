@@ -2,28 +2,30 @@
 layout: default
 ---
 
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <hr class="small">
-                    <span class="subheading">{% if page.title != "About" %}{{ site.description }}{% endif %}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<div id="projects" class="container">
+  <div class="accordion" id="accordionExample">
+    <a href data-toggle="collapse" data-target="#collapseOne"><h3>Projects</h3></a>
 
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			{{ content }}
-		</div>
-	</div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <ul id="projectList">
+          <li><a href="https://github.com/blinded93/household_management" target="_blank">Household Management</a></li>
+          <li><a href="https://github.com/blinded93/esculent-methods-jquery" target="_blank">Esculent Methods</a></li>
+        </ul>
+      </div>
+    </div>
+    <a href data-toggle="collapse" data-target="#collapseTwo"><h3>Blog</h3></a>
+
+    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<hr>
+<!-- Main Content -->

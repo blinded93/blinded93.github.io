@@ -1,11 +1,11 @@
 # Site settings
 title: Flatiron Coding Journey
-header-img: img/home-bg.png
+logo: img/lone-milky-way1.jpg
 email: blinded93@gmail.com
 copyright_name: blinded93
 description: > # this means to ignore newlines until "baseurl:"
   Changing my life one keystroke at a time..
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: ""
 twitter_username:
 github_username: blinded93
 learn_profile: blinded93
@@ -17,5 +17,5 @@ highlighter: rouge
 permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-
-gems: [jekyll-paginate, jekyll-feed]
+theme: "jekyll-theme-minimal"
+plugins: [jekyll-paginate, jekyll-feed]
