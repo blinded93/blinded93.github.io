@@ -15,8 +15,8 @@ Once I complete the assessment, my next step will be the job search!
 
 Excellent! I've got this.
 
-React was really fun to learn and definitely one of my favorited sections.
-Redux was a little harder, but after this project, I feel so much more confident with it.
+React was really fun to learn and definitely one of my favorite sections.
+Redux was a little harder, but after working with it, I feel so much more confident with it.
 
 As far as my last project, I decided to create a dice game called Farkle.
 
