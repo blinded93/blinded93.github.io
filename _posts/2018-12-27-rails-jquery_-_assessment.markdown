@@ -6,7 +6,7 @@ permalink: rails-jquery_app_-_assessment
 ---
 
 
-Learning Javascript has been one of the most beneficial experiences to my understanding of programming. That is not to say that I don't enjoy Ruby language, but learning a second has given a new perspective and understanding of the first.
+Learning Javascript has been one of the most beneficial experiences to my understanding of programming. That is not to say that I don't enjoy the Ruby language, but learning a second has given a new perspective and understanding of the first.
 
 After finishing the Javascript section, I learned the next project was going to involve adding Javascript/jQuery to my previous Rails project. In short, I already did. I had used the "remote: true" method, so it wouldn't have met the requirements, however one of my goals was to remake my first web app, Esculent Methods, so that is what this project entails.
 
