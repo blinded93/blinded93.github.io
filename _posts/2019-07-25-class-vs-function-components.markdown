@@ -13,7 +13,7 @@ This type of component is declared using the class keyword and is extended using
 
 In the pattern I briefly described above, these class components are used as containers for simpler UI components. The class will hold local state and methods to update said state that can be passed down to the presentation components as props.
 
-```
+```javascript
 class Post extends React.Component {
   render () {
     <>
@@ -30,7 +30,7 @@ On the simpler side are the function components, declared using the function key
 
 That is until February 2019, when React v16.8.0 was released. This release gave function components a new feature called hooks. These functions granted by React (useState, useEffect, etc) gave function components the same access that class components have, allowing for much greater flexibility, rather than strict UI rendering.
 
-```
+```javascript
 const Post = props => {
   return (
     <>
@@ -44,12 +44,14 @@ const Post = props => {
 ###Two hook explanations with example below:
 **useState**
 This function is how function components can create/update state. It is assigned using array destructuring to create variables for the state itself and a function to set the state.
-`const [state, setState] = useState(*default state value*)`
+```javascript
+const [state, setState] = useState(*default state value*)
+```
 
 **useEffect**
 The second example is where data fetching, subscriptions or manually changing the DOM would be located. These operations are called ‘side effects’, because they can affect other components and cannot be completed during rendering. This single function has the same purpose as all three of the class lifecycle methods componentDidMount, componentDidUpdate and componentWillUnmount.
 
-```
+```javascript
 const Posts = props => {
   const [posts, setPosts] = useState([])
 
