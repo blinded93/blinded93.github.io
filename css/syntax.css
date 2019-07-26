@@ -12,6 +12,7 @@
 
 .highlight pre code {
   white-space: pre;       // forces <code> to respect <pre> formatting
+  background-color: black;
 }
 
 
