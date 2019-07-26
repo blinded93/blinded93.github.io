@@ -7,12 +7,10 @@
 
 .highlight pre {
   overflow-x: auto;       // this sets the scrolling in x
-  background-color: black;
 }
 
 .highlight pre code {
   white-space: pre;       // forces <code> to respect <pre> formatting
-  background-color: black;
 }
 
 
