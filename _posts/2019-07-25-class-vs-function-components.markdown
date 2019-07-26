@@ -7,7 +7,7 @@ permalink: class-vs-function-components
 
 In this post, I’m going to explain the differences between class and function components. One of the most prominent patterns I was taught for deciding between class and function components was the container/presentation pattern. In this, classes are used to hold state and logic for the simpler function components containing UI elements. Although, with the introduction of hooks, which I will explain later, the lines have been blurred between each component type’s usefulness and functionality.
 
-### Class Components
+##### Class Components
 
 This type of component is declared using the class keyword and is extended using React.Component. Doing so will give access to all of React’s features, including a local state object and lifecycle methods (componentDidMount, componentWillUnmount, etc.).
 
@@ -24,7 +24,7 @@ class Post extends React.Component {
 }
 ```
 
-### Function Components
+##### Function Components
 
 On the simpler side are the function components, declared using the function keyword or the ES6 arrow syntax, with a ‘props’ object as it’s only argument. They receive props from their parent component and render elements. Without being connected to React, the possibilities for these functions are limited and many choose to stick with classes to save time converting them later if state or another need arises.
 
@@ -41,7 +41,7 @@ const Post = props => {
 }
 ```
 
-###Two hook explanations with example below:
+#####Two hook explanations with example below:
 **useState**
 This function is how function components can create/update state. It is assigned using array destructuring to create variables for the state itself and a function to set the state.
 ```javascript
@@ -71,7 +71,7 @@ const Posts = props => {
 }
 ```
 
-### Conclusion
+##### Conclusion
 A couple of my favorite reasons for using function components are simplicity and readability.  In diving deeper into hooks during my research for this post, my ideas have only become more concrete. It seems that function components are where React will be heading. Though nothing has been deprecated and classes will be fully supported going forward, I feel the majority of reasons function components wouldn’t be used has been answered with hooks. I look forward to continuing my exploration of Hooks, React, Javascript and coding in general.
 
 Thank you for reading.
