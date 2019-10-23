@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Rails Calendar"
+excerpt: "During my time as a student of Flatiron, we were tasked with creating 5 projects in each of the separate modules."
 date:       2019-10-03 22:31:45 -0400
 permalink: rails-calendar
 ---

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:      "CLI gem - assessment"
+excerpt: "When I began this project, I felt quite lost.  I didn't know where to start or even how to start."
 date:       2017-05-02 13:39:28 -0400
 permalink:  cli-gem_assessment
 ---

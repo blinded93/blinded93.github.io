@@ -1,6 +1,7 @@
 ---
 layout: post
 title:      "Sinatra app - assessment"
+excerpt: "After this blog post and a quick demonstration video, I will have finished my second portfolio project through Learn."
 date:       2017-07-15 22:05:31 -0400
 permalink:  sinatra_app-assessment
 ---

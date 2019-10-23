@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Rails/jQuery app - assessment"
+excerpt: "Learning Javascript has been one of the most beneficial experiences to my understanding of programming."
 date:       2018-03-24 22:31:45 -0400
 permalink: rails-jquery_app_-_assessment
 ---

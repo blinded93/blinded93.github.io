@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "React Class vs. Function Components"
+excerpt: "In this post, I’m going to explain the differences between class and function components. One of the most prominent patterns.."
 date:       2019-07-13 22:31:45 -0400
 permalink: class-vs-function-components
 ---
