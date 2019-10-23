@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Rails Struct"
+title: "Ruby Struct"
 date:       2019-10-15 22:31:45 -0400
-permalink: rails-struct
+permalink: ruby-struct
 ---
 
 _**Struct**: a conveient way to bundle a number of attributes together using accessor methods, without having to write an explicitly class_.
