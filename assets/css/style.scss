@@ -4,7 +4,7 @@
 @import "jekyll-theme-minimal";
 
 $grey: #727272;
-$grey-hover: darken(#727272, 30%);
+$grey-hover: darken($grey, 30%);
 $purple: darken(#6C347F, 10%);
 $purple-click: darken($purple, 5%);
 $yellow: darken(#D8D16B, 30%);
@@ -15,7 +15,7 @@ $green: darken(#85BB88, 20%);
 $green-click: darken($green, 10%);
 
 body {
-  background-color: black;
+  background-color: white;
   padding:50px;
   font-family: "Monaco", serif;
   color:$grey;
@@ -42,7 +42,7 @@ body {
 }
 
 #projects {
-  background-color: black;
+  background-color: white;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
