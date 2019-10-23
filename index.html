@@ -14,7 +14,7 @@ layout: page
         {% endif %}
     </a>
     {{ post.excerpt }}
-    <p class="post-meta">Posted by {% if site.author %}{{ site.author }}{% else %}{{ site.github_username }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    <p class="small post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
 {% endfor %}
