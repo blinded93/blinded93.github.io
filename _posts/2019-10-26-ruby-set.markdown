@@ -1,0 +1,199 @@
+---
+layout: post
+title: "Ruby Set"
+excerpt: "OpenStruct: a datastructure, simliar to a hash, that allows the definition of arbitrary attributes with their accompanying values."
+date:       2019-10-26 18:22:45 -0400
+permalink: ruby-set
+---
+
+_**Set**: a collection of unordered values with no duplicates. This is a hybrid of Array's intuative inter-operation facilities and Hash's fast lookup_.
+
+<small>_**(definition taken from ruby documentation)**_</small>
+
+Set is a part of the stdlib, so needs to be required.
+
+```ruby
+  require 'set'
+```
+
+#### Creation
+
+
+There are three ways to create a set. The first being the #to_set method.
+
+```ruby
+  [1, 2, 3].to_set   #<Set: {1, 2, 3}>
+  (1..5).to_set   #<Set: {1, 2, 3, 4, 5}>
+```
+
+The second is the class method Set::new. This method takes an enumerable object as an argument.
+
+```ruby
+  Set.new([1, 2, 3])  #<Set: {1, 2, 3}>
+  Set.new(1..5)  #<Set: {1, 2, 3, 4, 5}>
+```
+
+Both of these set methods can accept a block to preprocess each element of the collection prior to creation.
+
+The last is the class method Set::[] and takes an array as an argument, creating a set from the array elements.
+
+```ruby
+  Set[1, 2, 3, 4, 5]
+```
+
+#### Adding to a Set
+
+If only one element is being added at a time, the #add or #<< methods can be used, adding the object to the set and returning the set.
+
+```ruby
+  set = Set[]
+
+  set << "Bill"  #<Set: {"Bill"}>
+  set.add("Bob")  #<Set: {"Bill", "Bob"}>
+```
+
+A variation of this is the #add? method that will add objects to a set just the same, but will instead return 'nil' if the set already contains the new element.
+
+```ruby
+  set.add?("Bill")   #nil
+```
+
+If a collection of elements needs to be added at once, there are a few options. The first is #merge, which adds all the elements of an enumerable object to the set (mutating the set!)
+
+```ruby
+  set = Set[1, 2, 3]
+  
+  set.merge([3, 4, 5])  #<Set: {1, 2, 3, 4, 5}>
+  set  #<Set: {1, 2, 3, 4, 5}>
+```
+
+(Notice, even though there were 6 elements, sets don't contain duplicates.)
+
+Next are the + and &#124; operators. With sets, these operations do the same thing as #concat for a string or array. (creating a new object that is a combination of the other two objects.) The only difference between these two operators is that in order to mix a set with another enumberable object using the &#124;, the set must come first, otherwise throwing a "TypeError: no implicit conversion of a Set into an Array."
+
+```ruby
+  set123, set345 = Set[1,2,3], Set[4,5,6]
+  arr123, arr345 = [1,2,3], [3,4,5]
+
+  set123 + arr345   #<Set: {1, 2, 3, 4, 5}>
+  set123 + (1..5)   #<Set: {1, 2, 3, 4, 5}>
+  
+  set123 | set345   #<Set: {1, 2, 3, 4, 5}>
+  arr123 | arr345   # [1, 2, 3, 4, 5]
+  set123 | arr345   #<Set: {1, 2, 3, 4, 5}>
+  arr123 | set345   # TypeError (no implicit conversion of Set to Array)
+```
+
+#### Deletion from a Set
+
+Removing an element is done just like a hash, with the #delete and #delete_if methods. Just like the #add?, there is also a #delete?.
+
+```ruby
+  set = Set["Bill", "Bob"]
+
+  set.delete("Bill")   #<Set: {"Bob"}>
+  set.delete?("Bill")  # nil
+```
+
+The #delete? method will return 'nil' if the set does not contain the element.
+
+If multiple items need removed from the set, this can be done conditionally with a block to the #delete_if method.
+
+```ruby
+  set = Set[1, 2, 3, 4, 5, 6]
+  
+  set.delete_if { |n| n < 5 }   #<Set: {5, 6}>
+```
+
+If a collection of items needs removed, this can be done using the - operator or #difference method, which creates a new set of the original and removes all the elements of the given enumerable object.
+
+#### Comparison
+
+The following operators have equilvalent method aliases:
+
+>=  and superset?
+
+<= and subset?
+
+> and proper_superset?
+
+< and proper_subset?
+
+A subset is a set whose elements are all a part of another set.
+
+```ruby
+  set1, set2 = Set[2,3], Set[3,1,5,4,2]
+
+  set1 <= Set2       # true
+  set1.subset?(Set2) # true
+  set1 <= set2       # true
+```
+
+A superset is a set whose elements container all of the elements of another set.
+
+```ruby
+  set1, set2 = Set[3,4], Set[2,3,4,7,9]
+  
+  set2 >= set1         # true
+  set2.superset?(set1) # true
+  set1 >= set1         # true
+```
+
+As you can see by the last of each set of examples, a Set is both a superset and a subset of itself. This is where #proper_superset? (>) and #proper_subset?(<) come in. When a set contains all of the elements of another, but also has at least one other element, it is a proper superset.
+
+```ruby
+  Set[1,2,5,7] > Set[2,5]                 # true
+  Set[1,2,5,7].proper_superset?(Set[2,5]) # true
+  Set[2,5] > Set[2,5]                     # false
+```
+
+If all the elements in a set belong to another set, but that set has at least one more, it is a proper subset.
+
+```ruby
+  Set[2,5] < Set[1,2,5,7]            # true
+  Set[2,5].proper_subset?([1,2,5,7]) # true
+  Set[2,5] < Set[2,5]                # false
+```
+
+#### Equality
+
+The equality operator, ==, returns true when two sets are equal, containing the same elements.
+
+```ruby
+  set1, set2, set3 = Set[1,2,3], Set[1,2,3], Set[3,4,5]
+
+  set1 == set2  # true
+  set2 == set3  # false
+```
+
+#### Other Operators
+
+We already spoke about the &#124;, + and - operators. A couple more are the #intersetion method with it's alias &. This returns the elements that are contained in both collections.
+
+```ruby
+  Set[1,2,3,4,5] & Set[1,5,8,3,9]   #<Set: {1,5,3}>
+```
+
+An operation of Set that is not included with Array is the exclusive-or, using the ^ operator. This returns all elements found in each collection, but not in both collections.
+
+```ruby
+Set[1,2,3,4,5] ^ Set[4,5,6,7,8]   #<Set: {1,2,3,6,7,8}>
+```
+
+#### Testing for Memebership
+
+Both #include? and #member? check the set for a specific element. Sets use hashes for storage and in turn share fast lookup times. When compared with Array#include?, which must check every element, the set's hash lookup allows for constant O(1) time complexity. (it always takes the same amount of time, no matter how many elements there are)
+
+#### Enumeration
+
+Since sets include the Enumerable module like other collections and data structures, they can be iterated over in order to perform an action on each element.
+
+```ruby
+  set = Set[1,2,3,4,5]
+
+  set.map{ |n| n*5 }   #<Set: {5, 10, 15, 20, 25}>
+```
+
+#### Conclusion
+
+I really like the idea of sets. I feel it is much better than constantly having to call #uniq on an array, which I have found myself doing before. This feature coupled with the quick lookup time, I hope to find a good use in the near future to test out this data structure. Thanks for reading.
